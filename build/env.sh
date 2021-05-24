@@ -11,10 +11,10 @@ fi
 workspace="$PWD/build/_workspace"
 root="$PWD"
 ethdir="$workspace/src/github.com/minernl"
-if [ ! -L "$ethdir/monero-stratum" ]; then
+if [ ! -L "$ethdir/go-miningcore" ]; then
     mkdir -p "$ethdir"
     cd "$ethdir"
-    ln -s ../../../../../. monero-stratum
+    ln -s ../../../../../. go-miningcore
     cd "$root"
 fi
 
@@ -25,8 +25,8 @@ GOBIN="$PWD/build/bin"
 export GOPATH GOBIN
 
 # Run the command inside the workspace.
-cd "$ethdir/monero-stratum"
-PWD="$ethdir/monero-stratum"
+cd "$ethdir/go-miningcore"
+PWD="$ethdir/go-miningcore"
 
 # Launch the arguments with the configured environment.
 exec "$@"
