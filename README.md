@@ -10,55 +10,68 @@ High performance stratum mining pool with Web-interface written in Golang.
 * Easy detection of sick rigs
 * Daemon failover list
 * Concurrent shares processing
-* Beautiful Web-interface
+* Performance Web-interface
 
 ![](screenshot.png)
+
+
+## Algorithms Supported
+
+- random-x
+- random-xl
+- random-wow
+- random-arq
+- random-yada
+
 
 ## Installation
 
 Dependencies:
 
   * go-1.6
-  * Everything required to build Monero
-  * Monero
+  * Monero deamon
+
 
 ### Linux
 
 Use Ubuntu
 
+Install required packages:
+
+	sudo apt-get install git make cmake golang
+
+
 Compile Monero source (with shared libraries option):
 
-    apt-get install git cmake build-essential libssl-dev pkg-config libboost-all-dev
-    git clone --recursive https://github.com/monero-project/monero.git
+    sudo apt-get install build-essential libssl-dev pkg-config libboost-all-dev
+    sudo git clone --recursive https://github.com/monero-project/monero.git
     cd monero
-    cmake -DBUILD_SHARED_LIBS=1 .
-    make
+    sudo cmake -DBUILD_SHARED_LIBS=1 .
+    sudo make
 
-Install Golang and required packages:
+Clone Go-Miningcore stratum Pool: 
 
-    sudo apt-get install golang
-
-Clone stratum:
-
-    git clone https://github.com/minernl/go-miningcore.git
+    sudo git clone https://github.com/minernl/go-miningcore.git
     cd go-miningcore
 
 Build stratum:
 
-    MONERO_DIR=/path/to/monero cmake .
-    make
+    sudo MONERO_DIR=/path/to/monero cmake .
+    sudo make
 
-`MONERO_DIR=/path/to/monero` is optional, not needed if both `monero` and `monero-stratum` is in the same directory like `/opt/src/`. By default make will search for monero libraries in `../monero`. You can just run `cmake .`.
+`MONERO_DIR=/path/to/monero` is optional, not needed if both `monero` and `go-miningcore` are in the same directory like `/opt/src/`. 
+By default make will search for monero libraries in `../monero`. 
+You can just run `cmake .`.
 
 
 ### Running Go-Miningcore
 
-    ./build/bin/monero-stratum config.json
+    ./build/bin/go-miningcore config.json
 
 If you need to bind to privileged ports and don't want to run from `root`:
 
     sudo apt-get install libcap2-bin
-    sudo setcap 'cap_net_bind_service=+ep' /path/to/monero-stratum
+    sudo setcap 'cap_net_bind_service=+ep' /path/to/go-miningcore
 
 
 ## Go-Miningcore Pool Configuration
