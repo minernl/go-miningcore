@@ -60,6 +60,7 @@ If you need to bind to privileged ports and don't want to run from `root`:
     sudo apt-get install libcap2-bin
     sudo setcap 'cap_net_bind_service=+ep' /path/to/monero-stratum
 
+
 ## Go-Miningcore Pool Configuration
 
 Configuration is self-describing, just copy *config.example.json* to *config.json* and run stratum with path to config file as 1st argument.

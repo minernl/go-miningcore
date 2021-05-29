@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/ngchain/go-randomx"
+	"github.com/minernl/go-miningcore/go-randomx"
 )
 
 // Randomx algo
