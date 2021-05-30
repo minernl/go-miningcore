@@ -9,8 +9,6 @@ install_manifest.txt
 Makefile
 
 # Object files
-*.a
-*.so
 *.dylib
 
 # Configs
@@ -21,8 +19,7 @@ mainnet.json
 /build/_workspace/
 /build/bin/
 
-go-miningcore
-monero-stratum
 go.sum
 .vscode/
+.vs/
 cmake_build/

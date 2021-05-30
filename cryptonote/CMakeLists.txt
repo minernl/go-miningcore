@@ -22,7 +22,7 @@ link_directories(
 )
 
 # Build library
-add_library(${CXXLIB} SHARED src/cnutil.cpp)
+add_library(${CXXLIB} SHARED src/cryptonote.cpp)
 
 target_link_libraries(${CXXLIB}
     cryptonote_core

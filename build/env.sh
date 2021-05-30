@@ -10,10 +10,10 @@ fi
 # Create fake Go workspace if it doesn't exist yet.
 workspace="$PWD/build/_workspace"
 root="$PWD"
-ethdir="$workspace/src/github.com/minernl"
-if [ ! -L "$ethdir/go-miningcore" ]; then
-    mkdir -p "$ethdir"
-    cd "$ethdir"
+gomcdir="$workspace/src/github.com/minernl"
+if [ ! -L "$gomcdir/go-miningcore" ]; then
+    mkdir -p "$gomcdir"
+    cd "$gomcdir"
     ln -s ../../../../../. go-miningcore
     cd "$root"
 fi
@@ -25,8 +25,8 @@ GOBIN="$PWD/build/bin"
 export GOPATH GOBIN
 
 # Run the command inside the workspace.
-cd "$ethdir/go-miningcore"
-PWD="$ethdir/go-miningcore"
+cd "$gomcdir/go-miningcore"
+PWD="$gomcdir/go-miningcore"
 
 # Launch the arguments with the configured environment.
 exec "$@"

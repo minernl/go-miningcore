@@ -3,7 +3,7 @@ package cnutil
 // #cgo CFLAGS: -std=c11 -D_GNU_SOURCE
 // #cgo LDFLAGS: -L${SRCDIR} -lcnutil -Wl,-rpath ${SRCDIR} -lstdc++
 // #include <stdlib.h>
-// #include "src/cnutil.h"
+// #include "src/cryptonote.h"
 import "C"
 import "unsafe"
 

@@ -7,7 +7,7 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/minernl/go-miningcore/cnutil"
+	"github.com/minernl/go-miningcore/cryptonote"
 )
 
 type BlockTemplate struct {

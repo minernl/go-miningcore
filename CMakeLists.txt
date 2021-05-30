@@ -10,7 +10,7 @@ else()
 endif()
 
 add_subdirectory(hashing)
-add_subdirectory(cnutil)
+add_subdirectory(cryptonote)
 
 add_custom_command(
     OUTPUT build/bin

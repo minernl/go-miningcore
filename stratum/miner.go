@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/minernl/go-miningcore/cnutil"
+	"github.com/minernl/go-miningcore/cryptonote"
 	"github.com/minernl/go-miningcore/hashing"
 	"github.com/minernl/go-miningcore/util"
 )
