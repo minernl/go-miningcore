@@ -85,7 +85,7 @@ func readConfig(cfg *pool.Config) {
 }
 
 func main() {
-	logo.show()
+	logo.Show()
 	rand.Seed(time.Now().UTC().UnixNano())
 	readConfig(&cfg)
 	startNewrelic()

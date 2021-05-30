@@ -2,11 +2,9 @@
 
 import (
     "fmt"
-    "log"
 )
 
-
-func show(){
+func Show(){
 logo := ` 
  ██████╗  ██████╗        ███╗   ███╗██╗███╗   ██╗██╗███╗   ██╗ ██████╗  ██████╗ ██████╗ ██████╗ ███████╗   
 ██╔════╝ ██╔═══██╗       ████╗ ████║██║████╗  ██║██║████╗  ██║██╔════╝ ██╔════╝██╔═══██╗██╔══██╗██╔════╝    
@@ -29,10 +27,7 @@ logo := `
         XMR  - 44riGcQcDp4EsboDJP284CFCnJ2qP7y8DAqGC4D9WtVbEqzxQ3qYXAUST57u5FkrVF7CXhsEc63QNWazJ5b9ygwBJBtB2kT
         XPR  - rw2ciyaNshpHe7bCHo4bRWq6pqqynnWKQg:::ucl:::2242232925
         ZEC  - t1JtJtxTdgXCaYm1wzRfMRkGTJM4qLcm4FQ
+==============================================================================================================
 `
-
-
-
 fmt.Print(logo)
-log.Printf(logo)
 }
