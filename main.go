@@ -12,7 +12,8 @@ import (
 
 	"github.com/minernl/go-miningcore/pool"
 	"github.com/minernl/go-miningcore/stratum"
-
+	"github.com/minernl/go-miningcore/logo"
+	
 	"github.com/goji/httpauth"
 	"github.com/gorilla/mux"
 	"github.com/yvasiyarov/gorelic"
@@ -84,6 +85,7 @@ func readConfig(cfg *pool.Config) {
 }
 
 func main() {
+	logo.show()
 	rand.Seed(time.Now().UTC().UnixNano())
 	readConfig(&cfg)
 	startNewrelic()
